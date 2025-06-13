@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link re="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Please Login:</h1>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username"><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password"><br>
+            <a href="#" onclick="getUserCreds()">Login</a>
+            <p id="display"></p>
+        </form>
+        
+        <script>
+            function getUserCreds(){
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                verifyCreds(username, password);
+            }
+
+            function verifyCreds(userName, userPassword){
+                var name = "Mlamuli";
+                var password = "001";
+                if(userName == name && password == userPassword){
+                    document.getElementById("display").innerHTML = 'Correct Credentials. Logging in ...'
+                }else{
+                    document.getElementById("display").innerHTML = 'Incorrect Credentials.'
+                }
+            }
+        </script>
+    </body>
+</html>

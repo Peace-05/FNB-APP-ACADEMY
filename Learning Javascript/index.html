@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link re="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 id="greeting" onclick="greet()">Mlamuli</h1>
+        <script>
+            function greet(){
+                if(document.getElementById("greeting").innerHTML==("Mlamuli")){
+                    document.getElementById("greeting").innerHTML='You found'
+                } else{
+                    document.getElementById("greeting").innerHTML='Mlamuli'
+                }
+
+            }
+        </script>
+    </body>
+</html>
